@@ -1,3 +1,10 @@
+require("dotenv").config();
+require('dotenv').config()
+
+var keys = require("./keys");
+var axios = require("axios");
+var moment = require('moment');
+
 var Spotify = require('node-spotify-api');
  
 var spotify = new Spotify({
@@ -12,3 +19,7 @@ spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, d
  
 console.log(data); 
 });
+
+
+
+
