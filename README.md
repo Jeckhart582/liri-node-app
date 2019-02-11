@@ -1,11 +1,14 @@
 # liri-node-app
 LIRI App
 
+Goal: To allow user to enter in specific search commands to yeild desired results
+
+If user enters in spotify-this-song "Song Title", they will be returned information about said song title:
 ![Spotify Seach](/Images/spotify.png)
-Format: ![Alt Text](When user searches for a song)
 
+If user enter in "movie-this" "<i>Movie Title</i>":
 ![OMDB Seach](/Images/omdb.png)
-Format: ![Alt Text](When user searches for a movie)
 
+If user enter in "concert-this" "<i>Band</i>":
 ![bandsintown Seach](/Images/bands.png)
-Format: ![Alt Text](When user searches for a band in town)
+When user searches for a band in town
