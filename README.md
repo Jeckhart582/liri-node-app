@@ -3,7 +3,7 @@ LIRI App
 
 Goal: To allow user to enter in specific search commands to yeild desired results
 
-If user enters in spotify-this-song "Song Title", they will be returned information about said song title:
+If user enters in "spotify-this-song" "<i>Song Title</i>":
 ![Spotify Seach](/Images/spotify.png)
 
 If user enter in "movie-this" "<i>Movie Title</i>":
