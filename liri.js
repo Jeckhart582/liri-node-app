@@ -43,19 +43,27 @@ var omdbSearch = function () {
     axios.get(URL).then(
       function (response) {
         var movie = response.data
-        console.log("\n" + "-----------------------------------" + "\n" + "Artist: " + movie.Title+ "\n" + "Release Year: " + movie.Year + "\n" + "IMDB Rating: " + movie.imdbRating + "\n" + "Rotten Tomatoes Rating: " + movie.Metascore + "\n" + "Produced in :" + movie.Country + "\n" + "Language: " + movie.Language +  "\n" + "Plot Synopsis: " + movie.Plot + "\n" + "Actors: " + movie.Actors + "\n" );
+        console.log("\n" + "-----------------------------------" + "\n" + "Artist: " + movie.Title + "\n" + "Release Year: " + movie.Year + "\n" + "IMDB Rating: " + movie.imdbRating + "\n" + "Rotten Tomatoes Rating: " + movie.Metascore + "\n" + "Produced in :" + movie.Country + "\n" + "Language: " + movie.Language + "\n" + "Plot Synopsis: " + movie.Plot + "\n" + "Actors: " + movie.Actors + "\n");
       });
   }
-}
+};
 
-// bandsintown
-//   .getArtistEventList('Skrillex')
-//   .then(function(events) {
-//     // return array of events
-//   });
+var bandsInTown = function () {
+  if (input1 === "concert-this") {
 
-// "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+    var URL = "https://rest.bandsintown.com/artists/" + input2 + "/events?app_id=codingbootcamp";
+
+    axios.get(URL).then(
+      function (response) {
+        var band = response.data[0].venue
+        console.log("\n" + "-----------------------------------" + "\n" + "Venue: " + band.name + "\n" + "Location: " + band.city + ", " + band.region + "\n" + "Date: " + moment().format(response.data[0].datetime) + "\n");
+      })
+  }
+};
+
+
 
 spotifySearch();
 omdbSearch();
+bandsInTown();
 
